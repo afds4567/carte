@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="px-6 py-2">
+      <body className="px-0 py-2">
         <Provider>
           <HeadNavBar />
           {children}
