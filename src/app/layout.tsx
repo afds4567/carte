@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Vercel from "../../public/vercel.svg";
 import "@/app/globals.css";
 import Provider from "./Provider";
+import HeadNavBar from "@/components/HeadNavBar";
 
 export const metadata: Metadata = {
   title: "Create Own Map",
@@ -16,8 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Provider>{children}</Provider>
+      <body className="px-6 py-2">
+        <Provider>
+          <HeadNavBar />
+          {children}
+        </Provider>
       </body>
     </html>
   );
