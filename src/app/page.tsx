@@ -15,13 +15,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className="font-pretendard">HELLO NEXT.JS!</div>
-      <button
-        onClick={() => signOut()}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Button
-      </button>
+      <div className="grid grid-cols-4 h-screen">
+        <div className="bg-yellow-300">1</div>
+        <div className="bg-green-300 col-span-3">2</div>
+      </div>
     </div>
   );
 }
