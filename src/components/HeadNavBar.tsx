@@ -9,7 +9,7 @@ const HeadNavBar = () => {
     <>
       <div className="flex gap-5 items-center justify-between">
         <div className="flex gap-7 items-center">
-          <Image src="/airplane.png" alt="logo" width={50} height={50} />
+          <Image src="/logo.png" alt="logo" width={70} height={70} />
           <h2>Home</h2>
           <h2>Bookmark</h2>
         </div>
