@@ -9,11 +9,11 @@ export default function Home() {
   const { data: session } = useSession();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!session?.user) {
-      router.push("/Login");
-    }
-  }, [session]);
+  // useEffect(() => {
+  //   if (!session?.user) {
+  //     router.push("/Login");
+  //   }
+  // }, [session]);
 
   return (
     <div className="grid gird-cols-1 md:grid-cols-4 overflow-100 ">
