@@ -1,6 +1,5 @@
 "use client";
-
-import { useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 
 const HeadNavBar = () => {
@@ -39,9 +38,10 @@ const HeadNavBar = () => {
           />
         </div>
         <div>
-          {session?.user?.image && (
+          {session?.user?.image ? (
             <>
               <Image
+                onClick={() => signOut()}
                 src={session?.user?.image}
                 alt="user"
                 width={30}
@@ -49,6 +49,32 @@ const HeadNavBar = () => {
                 className="rounded-full cursor-pointer 
               hover:border-[2px] border-blue-500"
               />
+            </>
+          ) : (
+            <>
+              <svg
+                onClick={() => signIn()}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="w-6 h-6 rounded-full cursor-pointer
+                hover:border-[2px] border-blue-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  d="M12 14l9-5-9-5-9 5 9 5z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  d="M12 14l9-5-9-5-9 5 9 5z"
+                />
+              </svg>
             </>
           )}
         </div>
